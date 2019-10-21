@@ -1,0 +1,23 @@
+[
+  {
+    "qty": 2,
+    "name": "book",
+    "price": 12.49,
+    "category": "books",
+    "imported": false
+  },
+  {
+    "qty": 1,
+    "name": "music CD",
+    "price": 14.99,
+    "category": "cd",
+    "imported": false
+  },
+  {
+    "qty": 1,
+    "name": "chocolate bar",
+    "price":  0.85,
+    "category": "food",
+    "imported": false
+  }
+]
