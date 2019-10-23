@@ -23,8 +23,8 @@ describe('Taxes', () => {
     const importedProduct = mockProduct('other', true);
     expect(taxes.getTaxRate(importedProduct)).toBe(0.15);
 
-    const importedProduct = mockProduct('food', true);
-    expect(taxes.getTaxRate(importedProduct)).toBe(0.05);
+    const importedExemptProduct = mockProduct('food', true);
+    expect(taxes.getTaxRate(importedExemptProduct)).toBe(0.05);
   });
 
 })
