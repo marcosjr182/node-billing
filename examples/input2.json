@@ -1,0 +1,16 @@
+[
+  {
+    "qty": 1,
+    "name": "imported box of chocolates",
+    "price": 10.00,
+    "category": "food",
+    "imported": true
+  },
+  {
+    "qty": 1,
+    "name": "imported bottle of perfume",
+    "price": 47.50,
+    "category": "beauty",
+    "imported": true
+  }
+]
