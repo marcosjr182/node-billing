@@ -6,12 +6,13 @@ function _totalString({ taxes, total }) {
   return `Sales Taxes: ${taxes.toFixed(2)}\nTotal: ${total.toFixed(2)}`
 }
 
-function _productString({ qty, name, price }) {
-  return `${qty} ${name}: ${(price * qty).toFixed(2)}`
+function _productString(item) {
+  const price = ((item.price * item.qty) + taxes.getTaxes(item)).toFixed(2);
+  return `${item.qty} ${item.name}: ${price}`;
 }
 
 function _itemsString(items) {
-  return items.reduce((str, item) => (str + _productString(item) + '\n'), '');
+  return items.reduce((str, item) => (`${str}${_productString(item)}\n`), '');
 }
 
 function _calculateTotal(items) {
@@ -26,8 +27,7 @@ function _calculateTotal(items) {
   }, EMPTY_TOTAL);
 }
 
-function getReceipt(filePath) {
-  const cartItems = require(filePath) || [];
+function getReceipt(cartItems) {
   if (!cartItems.length) return _totalString(0, 0);
 
   const total = _calculateTotal(cartItems);
