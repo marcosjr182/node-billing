@@ -1,7 +1,6 @@
 'use strict';
 
-const fs = require('fs');
-// const billing = require('./billing/billing');
+const billing = require('./src/billing/billing');
 
 if (process.argv.length < 2) {
   return console.log(`
@@ -11,11 +10,13 @@ if (process.argv.length < 2) {
 }
 
 const filePath = process.argv.splice(2);
-//const receipt  = billing.getReceipt(filePath)
+const input = require(filePath[0]) || [];
+const receipt  = billing.getReceipt(input);
 
 console.log(`
 ------------------------
 billing.js
 ------------------------
+${receipt}
 ------------------------
 `);
