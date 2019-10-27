@@ -14,7 +14,7 @@ function _taxRate(product) {
 
 function getTaxes(product) {
   const rate = _taxRate(product);
-  return +((rate * product.price) / 100).toFixed(2);
+  return +(rate * product.price).toFixed(2);
 }
 
 module.exports = {
