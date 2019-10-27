@@ -33,7 +33,7 @@ describe('Taxes', () => {
     expect(taxes.getTaxes(exemptProduct)).toBe(0);
 
     const otherProduct = mockProduct('other', false, 2.2);
-    expect(taxes.getTaxes(otherProduct)).toBe(0);
+    expect(taxes.getTaxes(otherProduct)).toBe(0.22);
   });
 
 })

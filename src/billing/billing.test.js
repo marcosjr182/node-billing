@@ -40,7 +40,7 @@ describe('Billing', () => {
     ];
 
     expect(billing._calculateTotal(products))
-      .toEqual({ total: 34.43, taxes: 0.03 });
+      .toEqual({ total: 37.40, taxes: 3.00 });
   });
 
 })
